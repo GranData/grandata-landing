@@ -536,6 +536,10 @@ p {
       font-size: 18px;
       line-height: 27px; } }
 
+a {
+  color: #3C4352;
+  text-decoration: none; }
+
 button:focus, input:focus, textarea:focus {
   outline: none; }
 

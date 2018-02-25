@@ -10,13 +10,23 @@
 <body>
     <nav class="nav desktop">
         <div class="container nav__container">
-            <h1 class="logo"></h1>
+            <a href="/"><h1 class="logo"></h1></a>
             <ul class="nav__list">
-                <li class="nav__list__item">Company</li>
-                <li class="nav__list__item">Products</li>
-                <li class="nav__list__item">Team</li>
-                <li class="nav__list__item">Labs</li>
-                <li class="nav__list__item">Contact</li>
+                <li class="nav__list__item">
+                    <a href="#company">Company</a>
+                </li>
+                <li class="nav__list__item">
+                    <a href="#products">Products</a>
+                </li>
+                <li class="nav__list__item">
+                    <a href="#team">Team</a>
+                </li>
+                <li class="nav__list__item">
+                    <a href="/labs">Labs</a>
+                </li>
+                <li class="nav__list__item">
+                    <a href="#subscription">Contact</a>
+                </li>
                 <li class="nav__list__item">
                     <i class="icon icon--fb">
                         <svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -64,7 +74,7 @@
     </nav>
     <nav class="nav mobile">
         <div class="container nav__container">
-            <h1 class="logo"></h1>
+            <a href="/"><h1 class="logo"></h1></a>
             <div class="nav__hamb"></div>
         </div>
     </nav>
@@ -74,20 +84,20 @@
                 <h1 class="hero__title">
                     Grandata’s mission is to create a trusted universal data platform that maximizes value for both individuals and companies.
                 </h1>
-                <a href="#"><button class="button button--primary">Check out our products</button></a>
+                <a href="#products"><button class="button button--primary">Check out our products</button></a>
             </div>
             <div class="hero__column">
                 <div class="hero__image hero__image--index"></div>
             </div>
         </div>
     </section>
-    <section class="company">
+    <section class="company" id="company">
         <div class="container">
             <h2 class="company__title white desktop">Company</h2>
             <p class="company__content white">Grandata is a San Francisco-based company that leverages advanced research in Human Dynamics (the application of “big data” to social relationships and human behavior) to identify market trends and predict customer actions. Leading Telecom and financial services firms are using Grandata’s Social Universe product to transform “big data” into impressive business results.</p>
         </div>
     </section>
-    <section class="products">
+    <section class="products" id="products">
         <h2 class="products__title">Products</h2>
         <div class="products__item products__item--left">
             <div class="container products__container">
@@ -112,14 +122,14 @@
                 <div class="products__item__content__container">
                     <h3 class="products__item__title">Social Universe</h3>
                     <p class="products__item__content">Social Universe combines an easy-to-use visual experience with a powerful Human Dynamics engine to help business users identify market opportunities and key behavioral signals. Customers, such as Telefonica, Iusacell, and Santander, use Social Universe insights to develop and deliver highly targeted mobile marketing campaigns.</p>
-                    <a href="#">
+                    <a href="/social">
                         <button class="button button--transparent">Discover more</button>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
         <h2 class="team__title">Team</h2>
         <div class="team__row">
             <h4 class="team__row__title">Leadership</h4>
@@ -181,7 +191,7 @@
                 </ul>
             </div>
     </section>
-    <section class="subscription">
+    <section class="subscription" id="subscription">
         <div class="container">
             <h2 class="subscription__title white">Get in touch</h2>
             <div class="subscription__form">
