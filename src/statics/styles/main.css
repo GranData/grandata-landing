@@ -91,33 +91,53 @@ table {
   width: 105px;
   height: 32px; }
 
-.nav.mobile {
+.nav {
   box-shadow: 0 1px 0 0 #E6E6E6;
   z-index: 1;
   position: relative; }
-
-.nav__container {
-  height: 56px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.nav__hamb {
-  background: url("../images/ic_burger.svg"), no-repeat;
-  background-size: cover;
-  height: 14px;
-  width: 20px; }
+  .nav__container {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .nav__hamb {
+    background: url("../images/ic_burger.svg"), no-repeat;
+    background-size: cover;
+    height: 14px;
+    width: 20px; }
+  .nav__list__item .icon {
+    width: 20px;
+    height: 20px; }
+  @media screen and (min-width: 768px) {
+    .nav__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 450px; } }
 
 .hero {
   background: #F7F9FA;
   padding: 456px 0 48px; }
+  @media screen and (min-width: 768px) {
+    .hero {
+      display: inherit;
+      padding: 173px 0 173px; } }
   .hero__container {
     display: flex;
     flex-direction: column-reverse; }
+    @media screen and (min-width: 768px) {
+      .hero__container {
+        flex-direction: row; } }
   .hero__column {
     text-align: center; }
+    @media screen and (min-width: 768px) {
+      .hero__column {
+        text-align: left; } }
   .hero__title {
     margin-bottom: 31px; }
+    @media screen and (min-width: 768px) {
+      .hero__title {
+        width: 62%; } }
   .hero__image {
     background: url("../images/hero.png"), no-repeat;
     height: 400px;
@@ -127,13 +147,29 @@ table {
     top: 88px;
     background-size: cover;
     background-position-x: 30%; }
+    @media screen and (min-width: 768px) {
+      .hero__image {
+        height: 300px;
+        width: 45%;
+        top: 150px;
+        background-position-x: inherit; } }
 
 .company {
   background: #213A4B;
   padding: 48px 0; }
+  @media screen and (min-width: 768px) {
+    .company {
+      padding: 172px 0;
+      text-align: center; } }
+  .company__title {
+    margin-bottom: 56px; }
   .company__content {
     text-align: center;
     line-height: 31px; }
+    @media screen and (min-width: 768px) {
+      .company__content {
+        max-width: 60%;
+        margin: 0 auto; } }
 
 .products {
   background: #F7F9FA;
@@ -141,6 +177,9 @@ table {
   .products__title {
     text-align: center;
     margin-bottom: 32px; }
+    @media screen and (min-width: 768px) {
+      .products__title {
+        margin-bottom: 56px; } }
   .products__item {
     position: relative; }
     .products__item__title {
@@ -152,6 +191,9 @@ table {
       width: 327px;
       height: 285px;
       margin-bottom: 64px; }
+      @media screen and (min-width: 768px) {
+        .products__item--left .products__item__image {
+          margin-right: 46px; } }
       .products__item--left .products__item__image:before {
         content: " ";
         position: absolute;
@@ -160,6 +202,12 @@ table {
         height: 287px;
         left: 0;
         top: 30px; }
+    @media screen and (min-width: 768px) {
+      .products__item--right .products__container {
+        flex-direction: row-reverse; }
+      .products__item--right .products__item__content__container {
+        margin-top: 56px;
+        margin-right: 46px; } }
     .products__item--right .products__item__image {
       background: url("../images/image2.png");
       width: 327px;
@@ -174,6 +222,14 @@ table {
         height: 287px;
         left: 0;
         top: 30px; }
+        @media screen and (min-width: 768px) {
+          .products__item--right .products__item__image:before {
+            right: 0;
+            left: inherit;
+            top: 78px; } }
+  @media screen and (min-width: 768px) {
+    .products__container {
+      display: flex; } }
 
 .team {
   background: #F7F9FA;
@@ -323,7 +379,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .desktop {
-    display: inherit; } }
+    display: inline-flex; } }
 
 @media screen and (max-width: 767px) {
   .mobile {
