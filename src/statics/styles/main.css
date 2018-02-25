@@ -76,11 +76,27 @@ table {
   color: #0B7C9F;
   padding: 0; }
 
+.logo {
+  background: url("../images/logo.svg"), no-repeat;
+  width: 105px;
+  height: 32px; }
+
 .nav.mobile {
-  height: 56px;
   box-shadow: 0 1px 0 0 #E6E6E6;
   z-index: 1;
   position: relative; }
+
+.nav__container {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav__hamb {
+  background: url("../images/ic_burger.svg"), no-repeat;
+  background-size: cover;
+  height: 14px;
+  width: 20px; }
 
 .hero {
   background: #F7F9FA;
@@ -211,6 +227,18 @@ table {
       height: 50px; }
     .subscription__form-group__textarea {
       height: 204px; }
+
+.footer {
+  background: #F7F9FA;
+  padding: 48px 0;
+  text-align: center; }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .footer__logo, .footer__social {
+    margin-bottom: 40px; }
 
 body {
   font-family: 'Cabin-Regular', sans-serif;

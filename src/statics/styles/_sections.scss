@@ -1,9 +1,22 @@
 .nav {
   &.mobile {
-    height: 56px;
     box-shadow: 0 1px 0 0 #E6E6E6;
     z-index: 1;
     position: relative;
+  }
+
+  &__container {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__hamb {
+    background: url('../images/ic_burger.svg'), no-repeat;
+    background-size: cover;
+    height: 14px;
+    width: 20px;
   }
 }
 
@@ -201,6 +214,22 @@
     &__textarea {
       height: 204px;
     }
+  }
+}
 
+.footer {
+  background: #F7F9FA;
+  padding: 48px 0;
+  text-align: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo, &__social {
+    margin-bottom: 40px;
   }
 }
