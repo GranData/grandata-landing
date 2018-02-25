@@ -114,7 +114,9 @@ table {
     width: 100%;
     position: absolute;
     right: 0;
-    top: 88px; }
+    top: 88px;
+    background-size: cover;
+    background-position-x: 30%; }
 
 .company {
   background: #213A4B;
@@ -239,6 +241,11 @@ table {
     justify-content: space-between; }
   .footer__logo, .footer__social {
     margin-bottom: 40px; }
+  .footer__social__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 104px; }
 
 body {
   font-family: 'Cabin-Regular', sans-serif;
@@ -256,7 +263,18 @@ h2 {
   font-family: 'Cabin-Bold', sans-serif;
   color: #3C4352;
   font-size: 21px;
-  line-height: 25px; }
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  h2.white:after {
+    background: white; }
+  h2:after {
+    content: " ";
+    width: 48px;
+    height: 4px;
+    background: #3C4352;
+    margin-top: 16px; }
 
 h3 {
   font-family: 'Cabin-SemiBold', sans-serif;

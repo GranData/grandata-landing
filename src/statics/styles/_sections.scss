@@ -44,6 +44,8 @@
     position: absolute;
     right: 0;
     top: 88px;
+    background-size: cover;
+    background-position-x: 30%;
   }
 }
 
@@ -231,5 +233,14 @@
 
   &__logo, &__social {
     margin-bottom: 40px;
+  }
+
+  &__social {
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 104px;
+    }
   }
 }
