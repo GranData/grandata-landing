@@ -124,6 +124,19 @@ table {
       align-items: center;
       width: 450px; } }
 
+.subnav__list {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 212px;
+  margin: 0 auto; }
+  .subnav__list__item a {
+    color: rgba(60, 67, 82, 0.5);
+    font-family: 'Cabin-Bold', sans-serif; }
+  .subnav__list__item--active a {
+    color: #1096BF; }
+
 .hero {
   background: #F7F9FA;
   padding: 456px 0 48px; }
@@ -216,6 +229,32 @@ table {
         .hero--dark .hero__image--social {
           height: 413px;
           margin-top: 64px; } }
+  .hero--labs {
+    background: url("../images/hero--labs.png") no-repeat, linear-gradient(#213A4B, #213A4B);
+    background-size: cover;
+    background-position: 50%;
+    padding: 106px 0 140px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .hero--labs {
+        padding: 266px 0 261px;
+        text-align: left; } }
+    .hero--labs .hero__title--labs {
+      font-size: 34px;
+      line-height: 49px; }
+      @media screen and (min-width: 1024px) {
+        .hero--labs .hero__title--labs {
+          font-size: 71px;
+          line-height: 94px; } }
+    .hero--labs .hero__content--labs {
+      font-size: 18px;
+      line-height: 27px;
+      color: rgba(255, 255, 255, 0.5); }
+      @media screen and (min-width: 1024px) {
+        .hero--labs .hero__content--labs {
+          font-size: 25px;
+          line-height: 39px;
+          width: 55%; } }
 
 .company {
   background: #213A4B;
@@ -472,6 +511,51 @@ table {
       .analytics__list__item__content__title {
         margin-bottom: 8px;
         color: #3C4352; }
+
+.content {
+  background: #F7F9FA;
+  padding: 48px 0; }
+  @media screen and (min-width: 1024px) {
+    .content {
+      padding: 82px 0 196px; } }
+  .content__title, .content__subtitle {
+    text-align: center; }
+    @media screen and (min-width: 1024px) {
+      .content__title, .content__subtitle {
+        text-align: left;
+        max-width: 60%;
+        margin: 0 auto; } }
+  .content__title {
+    margin-bottom: 16px; }
+    @media screen and (min-width: 1024px) {
+      .content__title {
+        font-size: 71px;
+        line-height: 94px; } }
+  .content__subtitle {
+    margin-bottom: 32px; }
+    @media screen and (min-width: 1024px) {
+      .content__subtitle {
+        font-size: 25px;
+        line-height: 40px; } }
+  @media screen and (min-width: 1024px) {
+    .content__list {
+      max-width: 60%;
+      margin: 0 auto; } }
+  .content__list__item {
+    cursor: pointer;
+    padding: 16px 0;
+    box-shadow: 0 1px 0 0 rgba(33, 58, 75, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media screen and (min-width: 1024px) {
+      .content__list__item {
+        font-size: 18px;
+        line-height: 27px; } }
+    .content__list__item__arrow {
+      background: url("../images/arrow-grey.svg") no-repeat;
+      height: 12px;
+      width: 12px; }
 
 body {
   font-family: 'Cabin-Regular', sans-serif;
