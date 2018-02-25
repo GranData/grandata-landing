@@ -405,10 +405,13 @@
     &__list {
       display: flex;
       overflow: scroll;
-      margin-left: 88px;
+      padding-left: 88px;
 
       @media screen and (min-width: 1024px) {
-        margin-left: 0;
+        max-width: 80%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding-left: 0;
         justify-content: center;
       }
 
@@ -418,6 +421,21 @@
         align-items: center;
         justify-content: center;
         margin-right: 16px;
+        margin-bottom: 32px;
+
+        &__photo {
+          height: 200px;
+          width: 200px;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            height: 120%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
 
         &__name {
           font-family: 'Cabin-Bold', sans-serif;
