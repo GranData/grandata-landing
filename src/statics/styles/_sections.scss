@@ -125,7 +125,9 @@
     }
 
     @media screen and (min-width: 1024px) {
-      max-width: 40%;
+      max-width: 60%;
+      font-size: 25px;
+      line-height: 40px;
     }
   }
 }
@@ -160,7 +162,16 @@
       margin-bottom: 24px;
     }
 
+    .products__item__content__container {
+      margin-top: 56px;
+      margin-right: 46px;
+    }
+
     &--left {
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 56px;
+      }
+
       .products__item__image {
         background: url('../images/image1.png');
         background-size: contain;
@@ -172,6 +183,11 @@
           margin-right: 46px;
         }
 
+        @media screen and (min-width: 1024px) {
+          width: 600px;
+          height: 523px;
+        }
+
         &:before {
           content: " ";
           position: absolute;
@@ -181,6 +197,12 @@
           left: 0;
           top: 30px;
           z-index: -1;
+
+          @media screen and (min-width: 1024px) {
+            width: 650px;
+            height: 523px;
+            top: 56px;
+          }
         }
       }
     }
@@ -189,11 +211,6 @@
       @media screen and (min-width: 768px) {
         .products__container {
           flex-direction: row-reverse;
-        }
-
-        .products__item__content__container {
-          margin-top: 56px;
-          margin-right: 46px;
         }
       }
 
@@ -204,6 +221,13 @@
         height: 285px;
         margin-bottom: 64px;
         margin-top: 48px;
+
+        @media screen and (min-width: 1024px) {
+          width: 600px;
+          height: 523px;
+          margin-top: 0;
+        }
+
         &:before {
           content: " ";
           position: absolute;
@@ -218,6 +242,12 @@
             right: 0;
             left: inherit;
             top: 78px;
+          }
+
+          @media screen and (min-width: 1024px) {
+            width: 650px;
+            height: 523px;
+            top: 56px;
           }
         }
       }
@@ -235,6 +265,10 @@
   background: #F7F9FA;
   padding: 48px 0;
 
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 172px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 32px;
@@ -250,6 +284,11 @@
       display: flex;
       overflow: scroll;
       margin-left: 88px;
+
+      @media screen and (min-width: 1024px) {
+        margin-left: 0;
+        justify-content: center;
+      }
 
       &__item {
         display: flex;
@@ -284,6 +323,10 @@
   background: #213A4B;
   padding: 48px 0 45px;
 
+  @media screen and (min-width: 1024px) {
+    padding: 120px 0 172px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 24px;
@@ -292,6 +335,13 @@
   &__button {
     width: 100%;
     border-radius: 0;
+  }
+
+  &__form {
+    @media screen and (min-width: 1024px) {
+      max-width: 45%;
+      margin: 0 auto;
+    }
   }
 
   &__form-group {

@@ -15,6 +15,11 @@ h1 {
   color: #3C4352;
   font-size: 27px;
   line-height: 41px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 35px;
+    line-height: 51px;
+  }
 }
 
 h2 {
@@ -25,6 +30,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
 
   &.white {
     &:after {
@@ -46,6 +56,11 @@ h3 {
   color: #3C4352;
   font-size: 21px;
   line-height: 25px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 
 h4 {
@@ -60,6 +75,11 @@ p {
   color: #91969E;
   font-size: 14px;
   line-height: 24px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 button:focus, input:focus, textarea:focus {
@@ -77,6 +97,10 @@ button {
 .container {
   width: 90%;
   margin: 0 auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 85%;
+  }
 }
 
 .desktop {
