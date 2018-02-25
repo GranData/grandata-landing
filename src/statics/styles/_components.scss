@@ -34,7 +34,13 @@
 }
 
 .logo {
-  background: url('../images/logo.svg'), no-repeat;
+  background: url('../images/logo.svg') no-repeat;
+  background-size: contain;
   width: 105px;
   height: 32px;
+
+  @media screen and (min-width: 1024px) {
+    width: 157px;
+    height: 48px;
+  }
 }

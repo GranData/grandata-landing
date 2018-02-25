@@ -87,9 +87,14 @@ table {
     margin-top: 5px; }
 
 .logo {
-  background: url("../images/logo.svg"), no-repeat;
+  background: url("../images/logo.svg") no-repeat;
+  background-size: contain;
   width: 105px;
   height: 32px; }
+  @media screen and (min-width: 1024px) {
+    .logo {
+      width: 157px;
+      height: 48px; } }
 
 .nav {
   box-shadow: 0 1px 0 0 #E6E6E6;
@@ -100,6 +105,9 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media screen and (min-width: 1024px) {
+      .nav__container {
+        height: 80px; } }
   .nav__hamb {
     background: url("../images/ic_burger.svg"), no-repeat;
     background-size: cover;
