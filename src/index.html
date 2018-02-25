@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="statics/styles/main.css">
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav desktop">
         <div class="container nav__container">
             <h1 class="logo"></h1>
             <ul class="nav__list">
@@ -29,6 +29,11 @@
             </ul>
         </div>
     </nav>
+    <nav class="nav mobile">
+        <div class="container nav__container">
+            <h1 class="logo"></h1>
+        </div>
+    </nav>
     <section class="hero">
         <div class="container hero__container">
             <div class="hero__column">
@@ -41,13 +46,16 @@
         </div>
     </section>
     <section class="company">
-        <h2 class="company__title white">Company</h2>
-        <p class="company__content white">Grandata is a San Francisco-based company that leverages advanced research in Human Dynamics (the application of “big data” to social relationships and human behavior) to identify market trends and predict customer actions. Leading Telecom and financial services firms are using Grandata’s Social Universe product to transform “big data” into impressive business results.</p>
+        <div class="container">
+            <h2 class="company__title white desktop">Company</h2>
+            <p class="company__content white">Grandata is a San Francisco-based company that leverages advanced research in Human Dynamics (the application of “big data” to social relationships and human behavior) to identify market trends and predict customer actions. Leading Telecom and financial services firms are using Grandata’s Social Universe product to transform “big data” into impressive business results.</p>
+        </div>
     </section>
     <section class="products">
         <h2 class="products__title">Products</h2>
         <div class="products__item products__item--left">
             <div class="container">
+                <div class="products__item__image"></div>
                 <h3 class="products__item__title">Wibson</h3>
                 <p class="products__item__content">Wibson is a blockchain-based, decentralized data marketplace that provides the infrastructure for individuals to securely and anonymously sell private information that is validated for accuracy.</p>
                 <p class="products__item__content">In the Wibson marketplace, citizens, for the first time, will be able to participate in an efficiently functioning, decentralized data marketplace that provides both financial incentives and control over their personal information, all without sacrificing privacy.</p>
@@ -58,6 +66,7 @@
         </div>
         <div class="products__item products__item--right">
             <div class="container">
+                <div class="products__item__image"></div>
                 <h3 class="products__item__title">Social Universe</h3>
                 <p class="products__item__content">Social Universe combines an easy-to-use visual experience with a powerful Human Dynamics engine to help business users identify market opportunities and key behavioral signals. Customers, such as Telefonica, Iusacell, and Santander, use Social Universe insights to develop and deliver highly targeted mobile marketing campaigns.</p>
                 <a href="#">
@@ -67,61 +76,84 @@
         </div>
     </section>
     <section class="team">
-        <div class="container">
-            <h2 class="team__title">Team</h2>
-            <div class="team__row">
-                <h4 class="team__row__title">Leadership</h4>
-                <ul class="team__row__list">
-                    <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
-                        <div class="team__row__list__item__name">Autumn Jacobi</div>
-                        <div class="team__row__list__item__position">CEO</div>
-                    </li>
-                    <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
-                        <div class="team__row__list__item__name">Autumn Jacobi</div>
-                        <div class="team__row__list__item__position">CEO</div>
-                    </li>
-                    <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
-                        <div class="team__row__list__item__name">Autumn Jacobi</div>
-                        <div class="team__row__list__item__position">CEO</div>
-                    </li>
-                    <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
-                        <div class="team__row__list__item__name">Autumn Jacobi</div>
-                        <div class="team__row__list__item__position">CEO</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="team__row">
+        <h2 class="team__title">Team</h2>
+        <div class="team__row">
+            <h4 class="team__row__title">Leadership</h4>
+            <ul class="team__row__list">
+                <li class="team__row__list__item">
+                    <div class="team__row__list__item__photo">
+                        <img src="statics/images/photo1.png" alt="">
+                    </div>
+                    <div class="team__row__list__item__name">Autumn Jacobi</div>
+                    <div class="team__row__list__item__position">CEO</div>
+                </li>
+                <li class="team__row__list__item">
+                    <div class="team__row__list__item__photo">
+                        <img src="statics/images/photo1.png" alt="">
+                    </div>
+                    <div class="team__row__list__item__name">Autumn Jacobi</div>
+                    <div class="team__row__list__item__position">CEO</div>
+                </li>
+                <li class="team__row__list__item">
+                    <div class="team__row__list__item__photo">
+                        <img src="statics/images/photo1.png" alt="">
+                    </div>
+                    <div class="team__row__list__item__name">Autumn Jacobi</div>
+                    <div class="team__row__list__item__position">CEO</div>
+                </li>
+                <li class="team__row__list__item">
+                    <div class="team__row__list__item__photo">
+                        <img src="statics/images/photo1.png" alt="">
+                    </div>
+                    <div class="team__row__list__item__name">Autumn Jacobi</div>
+                    <div class="team__row__list__item__position">CEO</div>
+                </li>
+            </ul>
+        </div>
+        <div class="team__row">
                 <h4 class="team__row__title">Advisors</h4>
                 <ul class="team__row__list">
                     <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
+                        <div class="team__row__list__item__photo">
+                            <img src="statics/images/photo1.png" alt="">
+                        </div>
                         <div class="team__row__list__item__name">Autumn Jacobi</div>
                         <div class="team__row__list__item__position">CEO</div>
                     </li>
                     <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
+                        <div class="team__row__list__item__photo">
+                            <img src="statics/images/photo1.png" alt="">
+                        </div>
                         <div class="team__row__list__item__name">Autumn Jacobi</div>
                         <div class="team__row__list__item__position">CEO</div>
                     </li>
                     <li class="team__row__list__item">
-                        <div class="team__row__list__item__photo"></div>
+                        <div class="team__row__list__item__photo">
+                            <img src="statics/images/photo1.png" alt="">
+                        </div>
                         <div class="team__row__list__item__name">Autumn Jacobi</div>
                         <div class="team__row__list__item__position">CEO</div>
                     </li>
                 </ul>
             </div>
-        </div>
     </section>
     <section class="subscription">
         <div class="container">
-            <h2 class="subscription__title white">Sign up to the newsletter</h2>
+            <h2 class="subscription__title white">Get in touch</h2>
             <div class="subscription__form">
-                <input type="text" class="subscription__form__input" placeholder="E-mail address" />
-                <button class="button button--primary">Sign up</button>
+                <div class="subscription__form-group">
+                    <label class="subscription__form-group__label white">Your name</label>
+                    <input type="text" class="subscription__form-group__input" />
+                </div>
+                <div class="subscription__form-group">
+                    <label class="subscription__form-group__label white">Your e-mail</label>
+                    <input type="text" class="subscription__form-group__input" />
+                </div>
+                <div class="subscription__form-group">
+                    <label class="subscription__form-group__label white">What are you writing about?</label>
+                    <textarea class="subscription__form-group__textarea"></textarea>
+                </div>
+                <button class="subscription__button button button--primary">Send</button>
             </div>
         </div>
     </section>

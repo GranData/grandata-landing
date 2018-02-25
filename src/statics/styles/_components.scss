@@ -1,0 +1,22 @@
+.button {
+  &--primary {
+    background: #1096BF;
+    border: none;
+    color: #E9F5F6;
+    font-family: 'Cabin-Bold', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 48px 25px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08), 0 4px 6px 0 rgba(33,58,75,0.12);
+    border-radius: 4px;
+  }
+
+  &--transparent {
+    background: none;
+    border: none;
+    font-family: 'Cabin-Bold', sans-serif;
+    font-size: 14px;
+    color: #0B7C9F;
+    padding: 0;
+  }
+}

@@ -57,6 +57,161 @@ table {
   font-family: 'Cabin-SemiBold';
   src: url(../fonts/Cabin-SemiBold.ttf); }
 
+.button--primary {
+  background: #1096BF;
+  border: none;
+  color: #E9F5F6;
+  font-family: 'Cabin-Bold', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 23px 48px 25px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(33, 58, 75, 0.12);
+  border-radius: 4px; }
+
+.button--transparent {
+  background: none;
+  border: none;
+  font-family: 'Cabin-Bold', sans-serif;
+  font-size: 14px;
+  color: #0B7C9F;
+  padding: 0; }
+
+.nav.mobile {
+  height: 56px;
+  box-shadow: 0 1px 0 0 #E6E6E6;
+  z-index: 1;
+  position: relative; }
+
+.hero {
+  background: #F7F9FA;
+  padding: 456px 0 48px; }
+  .hero__container {
+    display: flex;
+    flex-direction: column-reverse; }
+  .hero__column {
+    text-align: center; }
+  .hero__title {
+    margin-bottom: 31px; }
+  .hero__image {
+    background: url("../images/hero.png"), no-repeat;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 88px; }
+
+.company {
+  background: #213A4B;
+  padding: 48px 0; }
+  .company__content {
+    text-align: center;
+    line-height: 31px; }
+
+.products {
+  background: #F7F9FA;
+  padding: 48px 0; }
+  .products__title {
+    text-align: center;
+    margin-bottom: 32px; }
+  .products__item {
+    position: relative; }
+    .products__item__title {
+      margin-bottom: 16px; }
+    .products__item__content {
+      margin-bottom: 24px; }
+    .products__item--left .products__item__image {
+      background: url("../images/image1.png");
+      width: 327px;
+      height: 285px;
+      margin-bottom: 64px; }
+      .products__item--left .products__item__image:before {
+        content: " ";
+        position: absolute;
+        background: #2E3BFA;
+        width: 322px;
+        height: 287px;
+        left: 0;
+        top: 30px; }
+    .products__item--right .products__item__image {
+      background: url("../images/image2.png");
+      width: 327px;
+      height: 285px;
+      margin-bottom: 64px;
+      margin-top: 48px; }
+      .products__item--right .products__item__image:before {
+        content: " ";
+        position: absolute;
+        background: #0167F7;
+        width: 322px;
+        height: 287px;
+        left: 0;
+        top: 30px; }
+
+.team {
+  background: #F7F9FA;
+  padding: 48px 0; }
+  .team__title {
+    text-align: center;
+    margin-bottom: 32px; }
+  .team__row__title {
+    margin-bottom: 24px;
+    text-align: center; }
+  .team__row__list {
+    display: flex;
+    overflow: scroll;
+    margin-left: 88px; }
+    .team__row__list__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px; }
+      .team__row__list__item__name {
+        font-family: 'Cabin-Bold', sans-serif;
+        font-size: 17px;
+        color: #3C4352;
+        margin-top: 25px; }
+      .team__row__list__item__position {
+        font-family: 'Cabin-Regular', sans-serif;
+        font-size: 14px;
+        color: #91969E;
+        margin-top: 9px; }
+  .team__row:last-child {
+    margin-top: 32px; }
+
+.subscription {
+  background: #213A4B;
+  padding: 48px 0 45px; }
+  .subscription__title {
+    text-align: center;
+    margin-bottom: 24px; }
+  .subscription__button {
+    width: 100%;
+    border-radius: 0; }
+  .subscription__form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px; }
+    .subscription__form-group__label {
+      margin-bottom: 16px; }
+    .subscription__form-group__input, .subscription__form-group__textarea {
+      background: #374E5D;
+      border: none;
+      padding: 16px;
+      box-sizing: border-box;
+      color: white;
+      font-family: 'Cabin-Regular', sans-serif;
+      font-size: 14px; }
+      .subscription__form-group__input:focus, .subscription__form-group__textarea:focus {
+        background: white;
+        font-family: 'Cabin-Regular', sans-serif;
+        font-size: 14px;
+        color: #3C4352; }
+    .subscription__form-group__input {
+      height: 50px; }
+    .subscription__form-group__textarea {
+      height: 204px; }
+
 body {
   font-family: 'Cabin-Regular', sans-serif;
   color: #3C4352;
@@ -93,5 +248,31 @@ p {
   font-size: 14px;
   line-height: 24px; }
 
+button:focus, input:focus, textarea:focus {
+  outline: none; }
+
+button {
+  cursor: pointer; }
+
 .white {
   color: white; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+@media screen and (max-width: 767px) {
+  .desktop {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .desktop {
+    display: inherit; } }
+
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: inherit; } }
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none; } }

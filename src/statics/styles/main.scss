@@ -1,5 +1,7 @@
 @import "reset";
 @import "fonts";
+@import "components";
+@import "sections";
 
 body {
   font-family: 'Cabin-Regular', sans-serif;
@@ -43,6 +45,39 @@ p {
   line-height: 24px;
 }
 
+button:focus, input:focus, textarea:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 .white {
   color: white;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.desktop {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inherit;
+  }
+}
+
+.mobile {
+  @media screen and (max-width: 767px) {
+    display: inherit;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
