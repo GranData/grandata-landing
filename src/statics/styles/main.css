@@ -122,6 +122,9 @@ table {
     .hero {
       display: inherit;
       padding: 173px 0 173px; } }
+  @media screen and (min-width: 1024px) {
+    .hero {
+      padding: 173px 0 343px; } }
   .hero__container {
     display: flex;
     flex-direction: column-reverse; }
@@ -138,6 +141,9 @@ table {
     @media screen and (min-width: 768px) {
       .hero__title {
         width: 62%; } }
+    @media screen and (min-width: 1024px) {
+      .hero__title {
+        width: 45%; } }
   .hero__image {
     background: url("../images/hero.png"), no-repeat;
     height: 400px;
@@ -153,6 +159,12 @@ table {
         width: 45%;
         top: 150px;
         background-position-x: inherit; } }
+    @media screen and (min-width: 1024px) {
+      .hero__image {
+        height: 900px;
+        width: 100%;
+        background-position-x: 400px;
+        background-repeat: no-repeat; } }
 
 .company {
   background: #213A4B;
@@ -170,10 +182,18 @@ table {
       .company__content {
         max-width: 60%;
         margin: 0 auto; } }
+    @media screen and (min-width: 1024px) {
+      .company__content {
+        max-width: 40%; } }
 
 .products {
   background: #F7F9FA;
-  padding: 48px 0; }
+  padding: 48px 0;
+  position: relative;
+  z-index: -100; }
+  @media screen and (min-width: 1024px) {
+    .products {
+      padding: 172px 0; } }
   .products__title {
     text-align: center;
     margin-bottom: 32px; }
@@ -188,6 +208,7 @@ table {
       margin-bottom: 24px; }
     .products__item--left .products__item__image {
       background: url("../images/image1.png");
+      background-size: contain;
       width: 327px;
       height: 285px;
       margin-bottom: 64px; }
@@ -201,7 +222,8 @@ table {
         width: 322px;
         height: 287px;
         left: 0;
-        top: 30px; }
+        top: 30px;
+        z-index: -1; }
     @media screen and (min-width: 768px) {
       .products__item--right .products__container {
         flex-direction: row-reverse; }
@@ -210,6 +232,7 @@ table {
         margin-right: 46px; } }
     .products__item--right .products__item__image {
       background: url("../images/image2.png");
+      background-size: contain;
       width: 327px;
       height: 285px;
       margin-bottom: 64px;
@@ -221,7 +244,8 @@ table {
         width: 322px;
         height: 287px;
         left: 0;
-        top: 30px; }
+        top: 30px;
+        z-index: -1; }
         @media screen and (min-width: 768px) {
           .products__item--right .products__item__image:before {
             right: 0;
@@ -376,14 +400,6 @@ button {
 @media screen and (max-width: 767px) {
   .desktop {
     display: none; } }
-
-@media screen and (min-width: 768px) {
-  .desktop {
-    display: inline-flex; } }
-
-@media screen and (max-width: 767px) {
-  .mobile {
-    display: inherit; } }
 
 @media screen and (min-width: 768px) {
   .mobile {
