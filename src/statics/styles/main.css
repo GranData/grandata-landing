@@ -46,5 +46,52 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: 'Proxima-Nova-Semibold';
-  src: url(../fonts/Proxima-Nova-Semibold.ttf); }
+  font-family: 'Cabin-Regular';
+  src: url(../fonts/Cabin-Regular.ttf); }
+
+@font-face {
+  font-family: 'Cabin-Bold';
+  src: url(../fonts/Cabin-Bold.ttf); }
+
+@font-face {
+  font-family: 'Cabin-SemiBold';
+  src: url(../fonts/Cabin-SemiBold.ttf); }
+
+body {
+  font-family: 'Cabin-Regular', sans-serif;
+  color: #3C4352;
+  font-size: 14px;
+  line-height: 18px; }
+
+h1 {
+  font-family: 'Cabin-Bold', sans-serif;
+  color: #3C4352;
+  font-size: 27px;
+  line-height: 41px; }
+
+h2 {
+  font-family: 'Cabin-Bold', sans-serif;
+  color: #3C4352;
+  font-size: 21px;
+  line-height: 25px; }
+
+h3 {
+  font-family: 'Cabin-SemiBold', sans-serif;
+  color: #3C4352;
+  font-size: 21px;
+  line-height: 25px; }
+
+h4 {
+  font-family: 'Cabin-Bold', sans-serif;
+  color: #616774;
+  font-size: 18px;
+  line-height: 22px; }
+
+p {
+  font-family: 'Cabin-Regular', sans-serif;
+  color: #91969E;
+  font-size: 14px;
+  line-height: 24px; }
+
+.white {
+  color: white; }
