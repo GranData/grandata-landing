@@ -57,34 +57,35 @@ table {
   font-family: 'Cabin-SemiBold';
   src: url(../fonts/Cabin-SemiBold.ttf); }
 
-.button--primary {
-  background: #1096BF;
-  border: none;
-  color: #E9F5F6;
-  font-family: 'Cabin-Bold', sans-serif;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 23px 48px 25px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(33, 58, 75, 0.12);
-  border-radius: 4px; }
-
-.button--transparent {
-  background: none;
-  border: none;
-  font-family: 'Cabin-Bold', sans-serif;
-  font-size: 14px;
-  color: #0B7C9F;
-  padding: 0;
-  position: relative; }
-  .button--transparent:after {
-    content: " ";
-    position: absolute;
-    background: url("../images/arrow.svg");
-    background-repeat: no-repeat;
-    height: 16px;
-    width: 16px;
-    margin-left: 8px;
-    margin-top: 5px; }
+.button {
+  cursor: pointer; }
+  .button--primary {
+    background: #1096BF;
+    border: none;
+    color: #E9F5F6;
+    font-family: 'Cabin-Bold', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 23px 48px 25px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(33, 58, 75, 0.12);
+    border-radius: 4px; }
+  .button--transparent {
+    background: none;
+    border: none;
+    font-family: 'Cabin-Bold', sans-serif;
+    font-size: 14px;
+    color: #0B7C9F;
+    padding: 0;
+    position: relative; }
+    .button--transparent:after {
+      content: " ";
+      position: absolute;
+      background: url("../images/arrow.svg");
+      background-repeat: no-repeat;
+      height: 16px;
+      width: 16px;
+      margin-left: 8px;
+      margin-top: 5px; }
 
 .logo {
   background: url("../images/logo.svg") no-repeat;
@@ -151,7 +152,7 @@ table {
         width: 62%; } }
     @media screen and (min-width: 1024px) {
       .hero__title {
-        width: 45%; } }
+        width: 57%; } }
   .hero__image {
     background: url("../images/hero.png"), no-repeat;
     height: 400px;
@@ -170,8 +171,8 @@ table {
     @media screen and (min-width: 1024px) {
       .hero__image {
         height: 900px;
-        width: 100%;
-        background-position-x: 400px;
+        width: 70%;
+        background-position-x: 0;
         background-repeat: no-repeat; } }
 
 .company {
@@ -200,7 +201,7 @@ table {
   background: #F7F9FA;
   padding: 48px 0;
   position: relative;
-  z-index: -100; }
+  z-index: 0; }
   @media screen and (min-width: 1024px) {
     .products {
       padding: 172px 0; } }

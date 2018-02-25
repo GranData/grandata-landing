@@ -76,7 +76,7 @@
     }
 
     @media screen and (min-width: 1024px) {
-      width: 45%;
+      width: 57%;
     }
   }
 
@@ -99,8 +99,8 @@
 
     @media screen and (min-width: 1024px) {
       height: 900px;
-      width: 100%;
-      background-position-x: 400px;
+      width: 70%;
+      background-position-x: 0;
       background-repeat: no-repeat;
     }
   }
@@ -140,7 +140,7 @@
   background: #F7F9FA;
   padding: 48px 0;
   position: relative;
-  z-index: -100;
+  z-index: 0;
 
   @media screen and (min-width: 1024px) {
     padding: 172px 0;
