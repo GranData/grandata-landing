@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,25 +46,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: 'Cabin-Regular';
-  src: url(../fonts/Cabin-Regular.ttf); }
-
-@font-face {
-  font-family: 'Cabin-Bold';
-  src: url(../fonts/Cabin-Bold.ttf); }
-
-@font-face {
-  font-family: 'Cabin-SemiBold';
-  src: url(../fonts/Cabin-SemiBold.ttf); }
-
 .button {
   cursor: pointer; }
   .button--primary {
     background: #1096BF;
     border: none;
     color: #E9F5F6;
-    font-family: 'Cabin-Bold', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     padding: 23px 48px 25px;
@@ -72,7 +62,8 @@ table {
   .button--transparent {
     background: none;
     border: none;
-    font-family: 'Cabin-Bold', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
     font-size: 14px;
     color: #0B7C9F;
     padding: 0;
@@ -100,7 +91,9 @@ table {
 .nav {
   box-shadow: 0 1px 0 0 #E6E6E6;
   z-index: 1;
-  position: relative; }
+  position: fixed;
+  width: 100%;
+  background-color: #fff; }
   .nav__container {
     height: 56px;
     display: flex;
@@ -133,7 +126,8 @@ table {
   margin: 0 auto; }
   .subnav__list__item a {
     color: rgba(60, 67, 82, 0.5);
-    font-family: 'Cabin-Bold', sans-serif; }
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700; }
   .subnav__list__item--active a {
     color: #1096BF; }
 
@@ -188,28 +182,29 @@ table {
         background-position-x: 0;
         background-repeat: no-repeat; } }
   .hero--dark {
-    background: url("../images/hero--background.svg") no-repeat, linear-gradient(#0167F7, #0167F7);
+    background: url("../images/hero--background.svg") no-repeat, #169fe2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 49px 0 0; }
+    padding: 105px 0 0; }
     @media screen and (min-width: 1024px) {
       .hero--dark {
-        padding: 72px 0 0; } }
+        padding: 152px 0 0; } }
     @media screen and (min-width: 768px) {
       .hero--dark .hero__title {
         width: 100%; } }
     @media screen and (min-width: 1024px) {
       .hero--dark .hero__title {
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
-        padding-bottom: 32px; } }
+        padding-bottom: 64px; } }
     .hero--dark .hero__content {
       margin-bottom: 24px;
       opacity: 0.54;
-      font-family: 'Cabin-Regular', sans-serif;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
       font-size: 18px;
       color: #FFFFFF;
       line-height: 27px; }
@@ -227,8 +222,7 @@ table {
       background-position-x: 50%; }
       @media screen and (min-width: 1024px) {
         .hero--dark .hero__image--social {
-          height: 413px;
-          margin-top: 64px; } }
+          height: 600px; } }
   .hero--labs {
     background: url("../images/hero--labs.png") no-repeat, linear-gradient(#213A4B, #213A4B);
     background-size: cover;
@@ -259,6 +253,9 @@ table {
 .company {
   background: #213A4B;
   padding: 48px 0; }
+  @media screen and (max-width: 767px) {
+    .company p {
+      font-size: 17px; } }
   @media screen and (min-width: 768px) {
     .company {
       padding: 172px 0;
@@ -301,9 +298,6 @@ table {
     .products__item .products__item__content__container {
       margin-top: 56px;
       margin-right: 46px; }
-    @media screen and (min-width: 1024px) {
-      .products__item--left {
-        margin-bottom: 56px; } }
     .products__item--left .products__item__image {
       background: url("../images/image1.png");
       background-size: contain;
@@ -331,47 +325,54 @@ table {
             width: 650px;
             height: 523px;
             top: 56px; } }
-    @media screen and (min-width: 768px) {
-      .products__item--right .products__container {
-        flex-direction: row-reverse; } }
-    .products__item--right .products__item__image {
-      background: url("../images/image2.png");
-      background-size: contain;
-      width: 327px;
-      height: 285px;
-      margin-bottom: 64px;
-      margin-top: 48px; }
+    .products__item--right {
+      margin-bottom: 48px; }
+      @media screen and (min-width: 768px) {
+        .products__item--right .products__container {
+          flex-direction: row-reverse; } }
       @media screen and (min-width: 1024px) {
-        .products__item--right .products__item__image {
-          width: 600px;
-          height: 523px;
-          margin-top: 0; } }
-      .products__item--right .products__item__image:before {
-        content: " ";
-        position: absolute;
-        background: #0167F7;
-        width: 322px;
-        height: 287px;
-        left: 0;
-        top: 30px;
-        z-index: -1; }
-        @media screen and (min-width: 768px) {
-          .products__item--right .products__item__image:before {
-            right: 0;
-            left: inherit;
-            top: 78px; } }
+        .products__item--right {
+          margin-bottom: 56px; } }
+      .products__item--right .products__item__image {
+        background: url("../images/image2.png");
+        background-size: contain;
+        width: 327px;
+        height: 285px;
+        margin-bottom: 64px;
+        margin-top: 48px; }
         @media screen and (min-width: 1024px) {
-          .products__item--right .products__item__image:before {
-            width: 650px;
+          .products__item--right .products__item__image {
+            width: 600px;
             height: 523px;
-            top: 56px; } }
+            margin-top: 0; } }
+        .products__item--right .products__item__image:before {
+          content: " ";
+          position: absolute;
+          background: #169fe2;
+          width: 322px;
+          height: 287px;
+          left: 0;
+          top: 30px;
+          z-index: -1; }
+          @media screen and (min-width: 768px) {
+            .products__item--right .products__item__image:before {
+              right: 0;
+              left: inherit;
+              top: 78px; } }
+          @media screen and (min-width: 1024px) {
+            .products__item--right .products__item__image:before {
+              width: 650px;
+              height: 523px;
+              top: 56px; } }
   @media screen and (min-width: 768px) {
     .products__container {
       display: flex; } }
 
 .team {
   background: #F7F9FA;
-  padding: 48px 0; }
+  padding: 48px 0;
+  max-width: 100%;
+  overflow: hidden; }
   @media screen and (min-width: 1024px) {
     .team {
       padding-bottom: 172px; } }
@@ -383,8 +384,14 @@ table {
     text-align: center; }
   .team__row__list {
     display: flex;
-    overflow: scroll;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
     padding-left: 88px; }
+    .team__row__list::-webkit-scrollbar {
+      display: none; }
     @media screen and (min-width: 1024px) {
       .team__row__list {
         max-width: 80%;
@@ -393,12 +400,12 @@ table {
         padding-left: 0;
         justify-content: center; } }
     .team__row__list__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       margin-right: 16px;
-      margin-bottom: 32px; }
+      margin-bottom: 32px;
+      flex: 0 0 auto; }
+      @media screen and (max-width: 1023px) {
+        .team__row__list__item:last-child {
+          padding-right: 200px; } }
       .team__row__list__item__photo {
         height: 200px;
         width: 200px;
@@ -410,12 +417,14 @@ table {
           left: 50%;
           transform: translateX(-50%); }
       .team__row__list__item__name {
-        font-family: 'Cabin-Bold', sans-serif;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
         font-size: 17px;
         color: #3C4352;
         margin-top: 25px; }
       .team__row__list__item__position {
-        font-family: 'Cabin-Regular', sans-serif;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 400;
         font-size: 14px;
         color: #91969E;
         margin-top: 9px; }
@@ -430,14 +439,53 @@ table {
       padding: 120px 0 172px; } }
   .subscription__title {
     text-align: center;
-    margin-bottom: 24px; }
-  .subscription__button {
-    width: 100%;
-    border-radius: 0; }
-  @media screen and (min-width: 1024px) {
-    .subscription__form {
-      max-width: 45%;
-      margin: 0 auto; } }
+    margin-bottom: 56px; }
+  .subscription__form {
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (min-width: 1024px) {
+      .subscription__form {
+        max-width: 45%;
+        margin: 0 auto; } }
+    @media screen and (min-width: 768px) {
+      .subscription__form {
+        max-width: 400px;
+        margin: 0 auto; } }
+    @media screen and (min-width: 1024px) {
+      .subscription__form {
+        max-width: 600px;
+        background: white;
+        border: 1px solid #E6E9F2;
+        border-radius: 4px; } }
+    .subscription__form__input {
+      flex: 1;
+      border: 1px solid #E6E9F2;
+      border-right: none;
+      padding: 17px 7px 15px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #91969E;
+      outline: none; }
+      @media screen and (min-width: 1024px) {
+        .subscription__form__input {
+          padding: 23px 16px 22px;
+          border: none; } }
+    .subscription__form__button {
+      background-color: #1096BF;
+      border: none;
+      font-size: 16px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 0 4px 4px 0 !important;
+      padding: 17px 16px 15px !important;
+      outline: none; }
+      @media screen and (min-width: 1024px) {
+        .subscription__form__button {
+          padding: 16px 32px !important;
+          border-radius: 4px !important;
+          margin: 8px; } }
   .subscription__form-group {
     display: flex;
     flex-direction: column;
@@ -450,17 +498,22 @@ table {
       padding: 16px;
       box-sizing: border-box;
       color: white;
-      font-family: 'Cabin-Regular', sans-serif;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
       font-size: 14px; }
       .subscription__form-group__input:focus, .subscription__form-group__textarea:focus {
         background: white;
-        font-family: 'Cabin-Regular', sans-serif;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 400;
         font-size: 14px;
         color: #3C4352; }
     .subscription__form-group__input {
       height: 50px; }
     .subscription__form-group__textarea {
       height: 204px; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 35px white inset; }
 
 .footer {
   background: #F7F9FA;
@@ -571,14 +624,35 @@ table {
       height: 12px;
       width: 12px; }
 
+.social__title {
+  margin-bottom: 24px; }
+
+.social__about {
+  background: #fff;
+  padding: 48px 0; }
+  .social__about p {
+    color: #91969E;
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center; }
+  @media screen and (min-width: 768px) {
+    .social__about {
+      padding: 172px 0; }
+      .social__about p {
+        font-size: 25px;
+        line-height: 39px; } }
+
 body {
-  font-family: 'Cabin-Regular', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
   color: #3C4352;
   font-size: 14px;
-  line-height: 18px; }
+  line-height: 18px;
+  overflow-x: hidden; }
 
 h1 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 27px;
   line-height: 41px; }
@@ -588,7 +662,8 @@ h1 {
       line-height: 51px; } }
 
 h2 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 21px;
   line-height: 25px;
@@ -609,7 +684,8 @@ h2 {
     margin-top: 16px; }
 
 h3 {
-  font-family: 'Cabin-SemiBold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 21px;
   line-height: 25px; }
@@ -619,13 +695,15 @@ h3 {
       line-height: 30px; } }
 
 h4 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #616774;
   font-size: 18px;
   line-height: 22px; }
 
 p {
-  font-family: 'Cabin-Regular', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
   color: #91969E;
   font-size: 14px;
   line-height: 24px; }
@@ -636,7 +714,13 @@ p {
 
 a {
   color: #3C4352;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+  -o-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+  transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1); }
+  a:hover {
+    color: #1096BF; }
 
 button:focus, input:focus, textarea:focus {
   outline: none; }

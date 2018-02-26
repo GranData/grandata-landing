@@ -1,7 +1,9 @@
 .nav {
   box-shadow: 0 1px 0 0 #E6E6E6;
   z-index: 1;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
 
   &__container {
     height: 56px;
@@ -50,7 +52,8 @@
     &__item {
       a {
         color: transparentize(#3C4352, 0.5);
-        font-family: 'Cabin-Bold', sans-serif;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
       }
 
       &--active {
@@ -132,16 +135,16 @@
   &--dark {
     background:
       url('../images/hero--background.svg') no-repeat,
-      linear-gradient(#0167F7, #0167F7);
+      #169fe2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 49px 0 0;
+    padding: 105px 0 0;
 
     @media screen and (min-width: 1024px) {
-      padding: 72px 0 0;
+      padding: 152px 0 0;
     }
 
     .hero__title {
@@ -150,16 +153,17 @@
       }
 
       @media screen and (min-width: 1024px) {
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
-        padding-bottom: 32px;
+        padding-bottom: 64px;
       }
     }
 
     .hero__content {
       margin-bottom: 24px;
       opacity: 0.54;
-      font-family: 'Cabin-Regular', sans-serif;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
       font-size: 18px;
       color: #FFFFFF;
       line-height: 27px;
@@ -180,8 +184,7 @@
       background-position-x: 50%;
 
       @media screen and (min-width: 1024px) {
-        height: 413px;
-        margin-top: 64px
+        height: 600px;
       }
     }
   }
@@ -227,6 +230,12 @@
 .company {
   background: #213A4B;
   padding: 48px 0;
+
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 17px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     padding: 172px 0;
@@ -290,9 +299,6 @@
     }
 
     &--left {
-      @media screen and (min-width: 1024px) {
-        margin-bottom: 56px;
-      }
 
       .products__item__image {
         background: url('../images/image1.png');
@@ -336,6 +342,12 @@
         }
       }
 
+      margin-bottom: 48px;
+
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 56px;
+      }
+
       .products__item__image {
         background: url('../images/image2.png');
         background-size: contain;
@@ -353,7 +365,7 @@
         &:before {
           content: " ";
           position: absolute;
-          background: #0167F7;
+          background: #169fe2;
           width: 322px;
           height: 287px;
           left: 0;
@@ -386,6 +398,8 @@
 .team {
   background: #F7F9FA;
   padding: 48px 0;
+  max-width: 100%;
+  overflow: hidden;
 
   @media screen and (min-width: 1024px) {
     padding-bottom: 172px;
@@ -404,7 +418,16 @@
 
     &__list {
       display: flex;
-      overflow: scroll;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
+      text-align: center;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       padding-left: 88px;
 
       @media screen and (min-width: 1024px) {
@@ -416,12 +439,15 @@
       }
 
       &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         margin-right: 16px;
         margin-bottom: 32px;
+        flex: 0 0 auto;
+
+        @media screen and (max-width:1023px) {
+          &:last-child {
+            padding-right: 200px;
+          }
+        }
 
         &__photo {
           height: 200px;
@@ -438,14 +464,16 @@
         }
 
         &__name {
-          font-family: 'Cabin-Bold', sans-serif;
+          font-family: 'Cabin', sans-serif;
+          font-weight: 700;
           font-size: 17px;
           color: #3C4352;
           margin-top: 25px;
         }
 
         &__position {
-          font-family: 'Cabin-Regular', sans-serif;
+          font-family: 'Cabin', sans-serif;
+          font-weight: 400;
           font-size: 14px;
           color: #91969E;
           margin-top: 9px;
@@ -469,18 +497,63 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 24px;
-  }
-
-  &__button {
-    width: 100%;
-    border-radius: 0;
+    margin-bottom: 56px;
   }
 
   &__form {
     @media screen and (min-width: 1024px) {
       max-width: 45%;
       margin: 0 auto;
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 600px;
+      background: white;
+      border: 1px solid #E6E9F2;
+      border-radius: 4px;
+    }
+
+    &__input {
+      flex: 1;
+      border: 1px solid #E6E9F2;
+      border-right: none;
+      padding: 17px 7px 15px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #91969E;
+      outline: none;
+
+      @media screen and (min-width: 1024px) {
+        padding: 23px 16px 22px;
+        border: none;
+      }
+    }
+
+    &__button {
+      background-color: #1096BF;
+      border: none;
+      font-size: 16px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 0 4px 4px 0 !important;
+      padding: 17px 16px 15px !important;
+      outline: none;
+
+      @media screen and (min-width: 1024px) {
+        padding: 16px 32px !important;
+        border-radius: 4px !important;
+        margin: 8px;
+      }
     }
   }
 
@@ -499,12 +572,14 @@
       padding: 16px;
       box-sizing: border-box;
       color: white;
-      font-family: 'Cabin-Regular', sans-serif;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
       font-size: 14px;
 
       &:focus {
         background: white;
-        font-family: 'Cabin-Regular', sans-serif;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 400;
         font-size: 14px;
         color: #3C4352;
       }
@@ -518,6 +593,10 @@
       height: 204px;
     }
   }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 35px white inset;
 }
 
 .footer {
@@ -677,6 +756,33 @@
         background: url('../images/arrow-grey.svg') no-repeat;
         height: 12px;
         width: 12px;
+      }
+    }
+  }
+}
+
+.social {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__about {
+    background: #fff;
+    padding: 48px 0;
+    
+    p {
+      color: #91969E;
+      font-size: 17px;
+      line-height: 31px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 172px 0;
+
+      p {
+        font-size: 25px;
+        line-height: 39px;
       }
     }
   }

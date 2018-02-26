@@ -4,14 +4,17 @@
 @import "sections";
 
 body {
-  font-family: 'Cabin-Regular', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
   color: #3C4352;
   font-size: 14px;
   line-height: 18px;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 27px;
   line-height: 41px;
@@ -23,7 +26,8 @@ h1 {
 }
 
 h2 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 21px;
   line-height: 25px;
@@ -52,7 +56,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Cabin-SemiBold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #3C4352;
   font-size: 21px;
   line-height: 25px;
@@ -64,14 +69,16 @@ h3 {
 }
 
 h4 {
-  font-family: 'Cabin-Bold', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
   color: #616774;
   font-size: 18px;
   line-height: 22px;
 }
 
 p {
-  font-family: 'Cabin-Regular', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
   color: #91969E;
   font-size: 14px;
   line-height: 24px;
@@ -85,6 +92,14 @@ p {
 a {
   color: #3C4352;
   text-decoration: none;
+  -webkit-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+    -moz-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+    -o-transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+    transition: all 0.4s cubic-bezier(0.18, 0.98, 0.45, 1);
+
+    &:hover {
+      color: #1096BF;
+    }
 }
 
 button:focus, input:focus, textarea:focus {

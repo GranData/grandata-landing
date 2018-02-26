@@ -5,7 +5,8 @@
     background: #1096BF;
     border: none;
     color: #E9F5F6;
-    font-family: 'Cabin-Bold', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     padding: 23px 48px 25px;
@@ -16,7 +17,8 @@
   &--transparent {
     background: none;
     border: none;
-    font-family: 'Cabin-Bold', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
     font-size: 14px;
     color: #0B7C9F;
     padding: 0;
