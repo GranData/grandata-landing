@@ -1,4 +1,11 @@
 .nav-mobile {
+  background: white;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  position: absolute;
+
   &__open {
     background: url('../images/ic_burger.svg'), no-repeat;
     background-size: cover;
@@ -6,20 +13,17 @@
     width: 20px;
   }
 
-  &__content {
+  &__close {
     position: absolute;
-    background: white;
-    width: 100%;
+    top: 24px;
+    right: 24px;
+  }
+
+  &__content {
+    position: relative;
     left: 0;
     top: 0;
-    height: 100vh;
     padding: 90px 60px 0;
-
-    &__close {
-      position: absolute;
-      top: 16px;
-      left: 340px;
-    }
 
     &__list {
       &--hor {

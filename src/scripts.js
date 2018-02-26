@@ -12,25 +12,26 @@ function run() {
   });
 
     // Mobile menu
-  var hambNode = document.querySelector('.nav-mobile__open')
-  var menuCloseNode = document.querySelector('.nav-mobile__content__close')
-  var menuMobileNode = document.querySelector('.nav-mobile')
   var bodyNode = document.querySelector('body')
-  var linksListMobileNode = document.querySelector('.nav-mobile__content')
 
-  hambNode.addEventListener('click', function (e) {
-    menuMobileNode.classList.toggle('hide')
+  var navNode = document.querySelector('.nav-mobile')
+  var navOpenNode = document.querySelector('.nav-mobile__open')
+  var navCloseNose = document.querySelector('.nav-mobile__close')
+  var navContentNode = document.querySelector('.nav-mobile__content')
+
+  navOpenNode.addEventListener('click', function () {
+    navNode.classList.toggle('hide')
     bodyNode.classList.toggle('lock-scroll')
   })
 
-  menuCloseNode.addEventListener('click', function (e) {
-    menuMobileNode.classList.toggle('hide')
+  navCloseNose.addEventListener('click', function () {
+    navNode.classList.toggle('hide')
     bodyNode.classList.toggle('lock-scroll')
   })
 
-  linksListMobileNode.addEventListener('click', function (e) {
+  navContentNode.addEventListener('click', function (e) {
     if (e.target.nodeName !== 'A') return
-    menuMobileNode.classList.toggle('hide')
+    navNode.classList.toggle('hide')
     bodyNode.classList.toggle('lock-scroll')
   })
 
