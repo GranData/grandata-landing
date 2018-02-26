@@ -1,3 +1,43 @@
+.nav-mobile {
+  &__open {
+    background: url('../images/ic_burger.svg'), no-repeat;
+    background-size: cover;
+    height: 14px;
+    width: 20px;
+  }
+
+  &__content {
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 90px 60px 0;
+
+    &__close {
+      position: absolute;
+      top: 16px;
+      left: 340px;
+    }
+
+    &__list {
+      &--hor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 100px;
+        margin-top: 120px;
+      }
+
+      &__item {
+        padding: 0 0 32px;
+      }
+    }
+  }
+}
+
 .nav {
   box-shadow: 0 1px 0 0 #E6E6E6;
   z-index: 1;
@@ -14,13 +54,6 @@
     @media screen and (min-width: 1024px) {
       height: 80px;
     }
-  }
-
-  &__hamb {
-    background: url('../images/ic_burger.svg'), no-repeat;
-    background-size: cover;
-    height: 14px;
-    width: 20px;
   }
 
   &__list {
